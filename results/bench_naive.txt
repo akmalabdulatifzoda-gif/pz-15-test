@@ -1,0 +1,23 @@
+goos: linux
+goarch: amd64
+pkg: github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx
+cpu: Intel(R) Xeon(R) Processor @ 2.10GHz
+BenchmarkSum-2      	1000000000	         0.1320 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDivide-2   	1000000000	         0.1310 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx	0.302s
+goos: linux
+goarch: amd64
+pkg: github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service
+cpu: Intel(R) Xeon(R) Processor @ 2.10GHz
+BenchmarkFindIDByEmail-2   	13556317	        91.68 ns/op	      16 B/op	       1 allocs/op
+PASS
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service	1.340s
+goos: linux
+goarch: amd64
+pkg: github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx
+cpu: Intel(R) Xeon(R) Processor @ 2.10GHz
+BenchmarkClip-2        	1000000000	         0.1783 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClipRunes-2   	  740256	      1719 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx	1.499s

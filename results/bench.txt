@@ -1,0 +1,39 @@
+goos: linux
+goarch: amd64
+pkg: github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx
+cpu: Intel(R) Xeon(R) Processor @ 2.10GHz
+BenchmarkSum_Naive-2   	1000000000	         0.1851 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSum_Naive-2   	1000000000	         0.1311 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSum_Naive-2   	1000000000	         0.1539 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSum-2         	1000000000	         0.4624 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSum-2         	1000000000	         0.3256 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSum-2         	1000000000	         0.3658 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDivide-2      	386290704	         2.777 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDivide-2      	482388670	         2.573 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDivide-2      	393717952	         3.098 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx	6.224s
+goos: linux
+goarch: amd64
+pkg: github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service
+cpu: Intel(R) Xeon(R) Processor @ 2.10GHz
+BenchmarkFindIDByEmail-2   	11725716	       100.9 ns/op	      16 B/op	       1 allocs/op
+BenchmarkFindIDByEmail-2   	13488962	        95.60 ns/op	      16 B/op	       1 allocs/op
+BenchmarkFindIDByEmail-2   	14145882	        92.04 ns/op	      16 B/op	       1 allocs/op
+PASS
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service	4.070s
+goos: linux
+goarch: amd64
+pkg: github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx
+cpu: Intel(R) Xeon(R) Processor @ 2.10GHz
+BenchmarkClip-2              	1000000000	         1.403 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClip-2              	908224586	         1.208 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClip-2              	989399702	         1.273 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClipRunes-2         	 9836406	       128.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClipRunes-2         	11920526	       114.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClipRunes-2         	10041009	       124.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClipRunes_Short-2   	1000000000	         0.5558 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClipRunes_Short-2   	1000000000	         0.5629 ns/op	       0 B/op	       0 allocs/op
+BenchmarkClipRunes_Short-2   	1000000000	         0.5540 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx	11.157s

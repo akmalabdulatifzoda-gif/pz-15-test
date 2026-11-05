@@ -1,0 +1,42 @@
+# Мутант: граница в Clip  (internal/stringsx/stringsx.go: «if len(s) <= max {» → «if len(s) < max {»)
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx	0.006s
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service	0.004s
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx	0.004s
+
+# Мутант: нет проверки деления на ноль  (internal/mathx/mathx.go: «if b == 0 {» → «if b == 0 && a != 0 {»)
+--- FAIL: TestDivide_Table (0.00s)
+    --- FAIL: TestDivide_Table/ноль_на_ноль (0.00s)
+FAIL	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx	0.007s
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service	(cached)
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx	0.004s
+
+# Мутант: сервис не нормализует email  (internal/service/service.go: «u, err := s.repo.ByEmail(e)» → «u, err := s.repo.ByEmail(email); _ = e»)
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx	(cached)
+--- FAIL: TestService_FindIDByEmail_Table (0.00s)
+    --- FAIL: TestService_FindIDByEmail_Table/регистр_не_важен (0.00s)
+    --- FAIL: TestService_FindIDByEmail_Table/пробелы_по_краям_обрезаются (0.00s)
+--- FAIL: TestService_PassesNormalizedEmailToRepo (0.00s)
+--- FAIL: TestService_WithTestifyMock_Found (0.00s)
+FAIL	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service	0.008s
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx	(cached)
+
+# Мутант: ошибка репозитория без %w  (internal/service/service.go: «"find user by email: %w"» → «"find user by email: %v"»)
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx	(cached)
+--- FAIL: TestService_FindIDByEmail (0.00s)
+    --- FAIL: TestService_FindIDByEmail/не_найден (0.00s)
+--- FAIL: TestService_FindIDByEmail_Table (0.00s)
+    --- FAIL: TestService_FindIDByEmail_Table/неизвестный_пользователь (0.00s)
+--- FAIL: TestService_RepoErrorIsWrapped (0.00s)
+FAIL	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service	0.005s
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx	(cached)
+
+# Мутант: max<0 не обрабатывается  (internal/stringsx/stringsx.go: «	if max < 0 {
+		max = 0
+	}
+» → «»)
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/mathx	(cached)
+ok  	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/service	(cached)
+--- FAIL: TestClip (0.00s)
+    --- FAIL: TestClip/max<0_считается_нулём (0.00s)
+FAIL	github.com/akmalabdulatifzoda-gif/pz-15-test/internal/stringsx	0.005s
+
